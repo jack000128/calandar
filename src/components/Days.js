@@ -6,7 +6,7 @@ function Days({weekdays}) {
       {
         weekdays.map((weekday, index) => {
           return (
-            <div className="day">{weekday}</div>
+            <div key={index} className="day">{weekday}</div>
           )
         })
       }

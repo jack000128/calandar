@@ -4,12 +4,9 @@ import Days from './Days'
 
 
 
-function CalandarBody({ weekdays, selectedYear, selectedMonth, getDates, today }) {
+function CalandarBody({ weekdays, selectedYear, selectedMonth, getDates, today, input, setInput }) {
   let firstDate = getDates.indexOf(1)
   let lastDate = getDates.indexOf(new Date(selectedYear, selectedMonth, 0).getDate(), 7);
-
-  
-
 
   
   return (
@@ -28,6 +25,8 @@ function CalandarBody({ weekdays, selectedYear, selectedMonth, getDates, today }
               firstDate={firstDate}
               lastDate={lastDate}
               today={today}
+              input={input}
+              setInput={setInput}
               
             />
           )

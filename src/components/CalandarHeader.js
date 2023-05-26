@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CalandarHeader({ selectedYear, selectedMonth, setSelectedYear, setSelectedMonth, months }) {
+function CalandarHeader({ today, selectedYear, selectedMonth, setSelectedYear, setSelectedMonth, months }) {
   
   function goPrev() {
     if (selectedMonth == 1) {
@@ -21,10 +21,9 @@ function CalandarHeader({ selectedYear, selectedMonth, setSelectedYear, setSelec
   }
 
   function goToday() {
-    setSelectedYear(new Date().getFullYear())
-    setSelectedMonth(new Date().getMonth() + 1)
+    setSelectedYear(today.year)
+    setSelectedMonth(today.month)
   }
-
 
 
   return (
