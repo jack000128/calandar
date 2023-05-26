@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'PorientOne'
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #dee2e6
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 700px;
+  height: 600px;
+  background-color: #f1f3f5;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
 }
+
+.year-month-wrapper {
+  width: 80%;
+  display: flex;
+  align-items: baseline;
+}
+
+.year,
+.month {
+  font-size: 36px;
+  font-weight: 800;
+  margin-left: 7px;
+  letter-spacing: 2px;
+}
+
+.month {
+  color: #00ADB5;
+}
+
+.btn-wrapper {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav {
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 7px;
+  transition: background-color 1s;
+}
+
+.prev:hover,
+.today:hover,
+.next:hover
+{
+  background-color: #3bc9db;
+  opacity: 0.7;
+}
+
+.body {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+}
+
+.day {
+  width: calc(100%/7);
+  text-align: center;
+  margin: 5px auto;
+  font-size: 16px;
+  color: #495057;
+  font-weight: 600;
+  
+}
+
+.dates {
+  width: 100%;
+  max-height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.date-wrapper {
+  width: calc(100%/7);
+  height: 70px;
+  border: 1px solid #495057;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: end;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.date-wrapper:hover {
+  background-color: #dee2e6;
+}
+
+.different-month {
+  opacity: 0.3;
+}
+
+.date {
+  position: relative;
+}
+
+.a {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  z-index: 2;
+}
+
+.is-today {
+  position: absolute;
+  top: 2.5px;
+  right: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #00ADB5;
+  z-index: 1;
+}
+
+
+
+
+@font-face {
+  font-family: 'PorientOne';
+  src: url('./fonts/PoiretOne-Regular.ttf');
+}
+
+
+
+
+
