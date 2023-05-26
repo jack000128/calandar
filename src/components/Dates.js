@@ -73,12 +73,15 @@ function Dates({ date, index, firstDate, lastDate, selectedMonth, selectedYear, 
   }
   
   return (
-    <div className="date-wrapper" style={{ opacity: differentMonth ? "0.3" : 1 }}>
+    <div className="date-wrapper" >
+      <div className="c">
+      </div>
+    
       {isToday && <div className="is-today"></div>}
       <div
         className="date"
         style={{
-          color: isToday ? "white" : null,
+          color: isToday ? "white" : differentMonth ? "grey" : null,
           fontWeight: isToday ? 600 : null,
         }}
       >

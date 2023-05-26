@@ -106,12 +106,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  border-bottom: 1px solid #495057;
+  border-left: 1px solid #495057;
 }
 
 .date-wrapper {
   width: calc(100%/7);
   height: 90px;
-  border: 1px solid #495057;
+  border-top: 1px solid #495057;
+  border-right: 1px solid #495057;
   color: #495057;
   font-weight: 600;
   font-size: 14px;
@@ -119,12 +122,24 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  position: relative
+  position: relative;
 }
 
 .date-wrapper:hover {
   background-color: #dee2e6;
 }
+
+.date-wrapper.different-month {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* .c {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #495057;
+  border-left: 1px solid #495057;
+} */
 
 /* .date {
   position: relative;
@@ -137,6 +152,7 @@
   right: 7px;
   z-index: 2;
 } */
+
 
 .date {
   display: flex;
