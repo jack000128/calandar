@@ -175,12 +175,15 @@
 
 .schedule {
   background-color: #00ADB5;
-  padding: 1px 10px;
+  border-radius: 5px;
+  padding: 0px 10px;
   font-size: 12px;
-  margin-bottom: 0.5px;
+  margin: 0.5px 3px;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: baseline
 }
+
 
 .add-btn-wrapper {
   display: flex;

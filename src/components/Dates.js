@@ -73,10 +73,9 @@ function Dates({ date, index, firstDate, lastDate, selectedMonth, selectedYear, 
   }
   
   return (
-    <div className="date-wrapper" >
-      <div className="c">
-      </div>
-    
+    <div className="date-wrapper">
+      <div className="c"></div>
+
       {isToday && <div className="is-today"></div>}
       <div
         className="date"
@@ -87,18 +86,28 @@ function Dates({ date, index, firstDate, lastDate, selectedMonth, selectedYear, 
       >
         {date}
       </div>
-      {content.length > 0
-        && <div>{content.map((item) => (
-          <div className="schedule" key={item.id}>
-            {item.company}
-            <button onClick={() => {
-              handleDelete(item.id)
-            }}>🗑</button>
-          </div>
-        ))}</div>
-      }
 
-
+      {content.length > 0 && (
+        <div>
+          {content.slice(0, 2).map((item) => (
+            <div className="schedule" key={item.id}>
+              <span>{item.company}</span>
+              <button
+                onClick={() => {
+                  handleDelete(item.id);
+                }}
+              >
+                x
+              </button>
+            </div>
+          ))}
+          {content.length > 2 && (
+            <div className="schedule" style={{background: 'transparent'}}>
+              <span>...외 {content.length - 2}개</span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
